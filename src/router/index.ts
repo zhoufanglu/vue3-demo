@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
-const Demo = ()=> import('@/views/demo.vue')
+const Demo = ()=> import('@v/demo.vue')
+const Demo2 = ()=> import('@v/demo2.vue')
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -19,7 +20,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/demo',
     name: 'demo',
     component: Demo
-  }
+  },
+  {
+    path: '/demo2',
+    name: 'demo2',
+    component: Demo2
+  },
 ]
 
 const router = createRouter({

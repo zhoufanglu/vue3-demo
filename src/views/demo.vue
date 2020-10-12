@@ -2,7 +2,7 @@
   <h1>
    composition API
   </h1>
-  <div>
+  <div class="p-demo2">
     msg:{{msg}}
     <div>-------</div>
     person: {{person}}
