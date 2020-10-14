@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import {ref,reactive,onMounted,readonly, isReadonly, computed, ComputedRef,watch} from 'vue'
+import {ref,reactive,readonly, isReadonly, computed, ComputedRef,watch} from 'vue'
 import {useRef, useReactive} from "@/assets/js/useMod"
 
 export default {
@@ -27,7 +27,7 @@ export default {
   props: {},
   //由于在执行 setup 时尚未创建组件实例，因此在 setup 选项中没有 this
   setup (props: any, context: any) {
-    console.log(15,'我是setUp')
+    console.log(15,'1---我是setUp,开始创建组件')
     console.log(16, props)
     console.log(17, context)
     console.log('-------------')
@@ -68,6 +68,7 @@ export default {
       count
     }
   },
+
   computed: {
     getComputedVal(){
       return 'aaaa'

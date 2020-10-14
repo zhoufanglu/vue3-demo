@@ -1,7 +1,12 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
+const Home = ()=> import('@v/Home.vue')
 const Demo = ()=> import('@v/demo.vue')
 const Demo2 = ()=> import('@v/demo2.vue')
+const Repositories = ()=> import('@v/Repositories.vue')
+const lifeCycle = ()=> import('@v/lifeCycle.vue')
+const watch = ()=> import('@v/watch.vue')
+const computed = ()=> import('@v/computed.vue')
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -23,8 +28,28 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/demo2',
-    name: 'demo2',
+    name: 'ref,reactive',
     component: Demo2
+  },
+  {
+    path: '/Repositories',
+    name: 'Repositories',
+    component: Repositories
+  },
+  {
+    path: '/lifeCycle',
+    name: 'lifeCycle',
+    component: lifeCycle
+  },
+  {
+    path: '/watch',
+    name: 'watch',
+    component: watch
+  },
+  {
+    path: '/computed',
+    name: 'computed',
+    component: computed
   },
 ]
 

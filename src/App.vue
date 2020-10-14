@@ -1,15 +1,25 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/demo">Demo</router-link>|
-    <router-link to="/demo2">Demo2</router-link>|
+    <router-link
+                 v-for="(i,index) in routerList"
+                 :key="i.name"
+                 :to="i.path"
+    >{{i.name}}&nbsp;&nbsp;&nbsp;&nbsp;</router-link>
   </div>
   <router-view/>
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
-  export default defineComponent({})
+  import router from '@/router/index'
+  export default defineComponent({
+    setup(){
+      console.log(18, router.options.routes)
+      const routerList:any[] = router.options.routes
+      return {
+        routerList
+      }
+    }
+  })
 </script>
 <style lang="scss">
 #app {
