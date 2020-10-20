@@ -7,6 +7,9 @@ const lifeCycle = ()=> import('@v/lifeCycle.vue')
 const watch = ()=> import('@v/watch.vue')
 const computed = ()=> import('@v/computed.vue')
 
+//塞尔达 zelda
+const zelda = ()=> import('@v/Zelda/index.vue')
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -51,6 +54,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'computed',
     component: computed
   },
+  {
+    path: '/zelda',
+    name: 'zelda',
+    component: zelda
+  }
 ]
 
 const router = createRouter({
