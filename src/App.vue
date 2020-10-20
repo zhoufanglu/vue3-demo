@@ -13,7 +13,6 @@
   import router from '@/router/index'
   export default defineComponent({
     setup(){
-      console.log(18, router.options.routes)
       const routerList:any[] = router.options.routes
       return {
         routerList

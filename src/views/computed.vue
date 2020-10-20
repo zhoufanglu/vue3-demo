@@ -13,7 +13,7 @@ export default {
   setup(){
     const a = ref<number>(1)
     const b = ref<number>(1)
-    const addVal:number = computed(():number=> a.value+b.value)
+    const addVal:any = computed(():number=> a.value+b.value)
     return {
       addVal,
       a,

@@ -17,7 +17,7 @@ export default {
   setup(){
     const refCount = ref<number>(1)
     const refCountTwo = ref<number>(100)
-    const personA = reactive<person>({
+    const personA = reactive<Person>({
       name: 'lfz',
       age: 10
     })
